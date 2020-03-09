@@ -56,7 +56,7 @@ namespace Diplomas
         public int nAlumnos()
         {
             {
-                string stmt = "SELECT COUNT(*) FROM Registrados";
+                string stmt = "SELECT TOP 1 Folio FROM Registrados";
                 int count = 0;
 
                  
@@ -64,8 +64,27 @@ namespace Diplomas
                     {
                         conn.Open();
                         count = (int)cmdCount.ExecuteScalar();
+                        conn.Close();
                     }
                 
+                return count;
+            }
+        }
+
+        public int nUltimo()
+        {
+            {
+                string stmt = "SELECT MAX(Folio) FROM Registrados";
+                int count = 0;
+
+
+                using (SqlCommand cmdCount = new SqlCommand(stmt, conn))
+                {
+                    conn.Open();
+                    count = (int)cmdCount.ExecuteScalar();
+                    conn.Close();
+                }
+
                 return count;
             }
         }
@@ -105,5 +124,46 @@ namespace Diplomas
 
 
         }
+
+        public string ObtenerCorreo(int i)
+        {
+            string correo = "SELECT * FROM Registrados WHERE Folio = " + i;
+            string enviar = " ";
+            SqlCommand comando = new SqlCommand(correo, conn);
+            conn.Open();
+            SqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {
+                enviar = registro["Correo"].ToString();
+            }
+
+            conn.Close();
+            return enviar;
+            
+        }
+
+        public string VoF(int i)
+        {
+            string stmt = "select * FROM Registrados WHERE Folio= " + i;
+            string count = " ";
+            SqlCommand comando = new SqlCommand(stmt, conn);
+            conn.Open();
+            SqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {
+                count = registro["Graduado"].ToString();
+            }
+
+            conn.Close();
+            return count;
+
+
+
+        }
+
+
+
+
+
     }
 }

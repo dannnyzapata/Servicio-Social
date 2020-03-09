@@ -37,13 +37,17 @@ namespace Diplomas
                 + txtApellido1.Text + "','"
                 + txtApellido2.Text + "','"
                  + txtCorreo.Text + "','"
-                + dtpFecha.Value.ToString("dd/MM/yyyy") + "')"
+                + dtpFecha.Value.ToString("dd/MM/yyyy") + "','" + pcbFoto.Image + "','FALSE');"
                 );
             txtApellido1.Clear();
             txtApellido2.Clear();
             txtCorreo.Clear();
             txtNombre.Clear();
+            pcbFoto.Image = null;
+            MessageBox.Show("Alumno en base de Datos");
 
+
+            con.desconectar();
 
             /*foreach (DataGridViewRow row in dgvAlumnos.Rows)
             {
@@ -53,26 +57,40 @@ namespace Diplomas
             }
 
             */
-            con.desconectar();
+
         }
 
         private void btDiplomas_Click(object sender, EventArgs e)
         {
             Conexion con = new Conexion();
-            int pfolio;
-            //con.conectar();
-            //string folios; 
-            //folios = con.ejecutarQuery("select count(*) from Registrados").ToString();
-            // MessageBox.Show(folios);
+            int pfolio, ultimo;
+            
 
             pfolio = con.nAlumnos();
+            ultimo = con.nUltimo();
             //MessageBox.Show(pfolio.ToString());
 
             con.desconectar();
-            Diplomad pDiploma = new Diplomad(pfolio);
+            Diplomad pDiploma = new Diplomad(pfolio,ultimo);
             //pDiploma.ShowDialog();
-           
+
 
         }
+
+        private void btPic_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                this.AbrirFile.ShowDialog();
+                pcbFoto.Load(this.AbrirFile.FileName);
+
+            }
+            catch
+            {
+                MessageBox.Show("No se pudo cargar la imagen");
+            }
+        }
+
+
     }
 }
