@@ -44,8 +44,12 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.pcbFoto = new System.Windows.Forms.PictureBox();
+            this.btPic = new System.Windows.Forms.Button();
+            this.AbrirFile = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.alumnosDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registradosBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
             this.SuspendLayout();
             // 
             // alumnosDBDataSet
@@ -64,7 +68,7 @@
             // 
             // btActualizar
             // 
-            this.btActualizar.Location = new System.Drawing.Point(73, 321);
+            this.btActualizar.Location = new System.Drawing.Point(92, 529);
             this.btActualizar.Name = "btActualizar";
             this.btActualizar.Size = new System.Drawing.Size(75, 23);
             this.btActualizar.TabIndex = 1;
@@ -110,7 +114,7 @@
             // 
             // btDiplomas
             // 
-            this.btDiplomas.Location = new System.Drawing.Point(217, 321);
+            this.btDiplomas.Location = new System.Drawing.Point(225, 529);
             this.btDiplomas.Name = "btDiplomas";
             this.btDiplomas.Size = new System.Drawing.Size(75, 23);
             this.btDiplomas.TabIndex = 7;
@@ -163,11 +167,36 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Fecha de Ingreso:";
             // 
+            // pcbFoto
+            // 
+            this.pcbFoto.Location = new System.Drawing.Point(78, 278);
+            this.pcbFoto.Name = "pcbFoto";
+            this.pcbFoto.Size = new System.Drawing.Size(233, 214);
+            this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pcbFoto.TabIndex = 13;
+            this.pcbFoto.TabStop = false;
+            // 
+            // btPic
+            // 
+            this.btPic.Location = new System.Drawing.Point(116, 239);
+            this.btPic.Name = "btPic";
+            this.btPic.Size = new System.Drawing.Size(155, 23);
+            this.btPic.TabIndex = 14;
+            this.btPic.Text = "Foto de Alumno";
+            this.btPic.UseVisualStyleBackColor = true;
+            this.btPic.Click += new System.EventHandler(this.btPic_Click);
+            // 
+            // AbrirFile
+            // 
+            this.AbrirFile.FileName = "openFileDialog1";
+            // 
             // Datos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(357, 380);
+            this.ClientSize = new System.Drawing.Size(399, 590);
+            this.Controls.Add(this.btPic);
+            this.Controls.Add(this.pcbFoto);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -185,6 +214,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.alumnosDBDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.registradosBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -206,6 +236,9 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.PictureBox pcbFoto;
+        private System.Windows.Forms.Button btPic;
+        private System.Windows.Forms.OpenFileDialog AbrirFile;
     }
 }
 
