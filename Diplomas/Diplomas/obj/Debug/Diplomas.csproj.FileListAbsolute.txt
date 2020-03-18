@@ -41,3 +41,18 @@ C:\Users\Daniel 2\Desktop\Diplomas\Diplomas\obj\Debug\Diplomas.csproj.GenerateRe
 C:\Users\Daniel 2\Desktop\Diplomas\Diplomas\obj\Debug\Diplomas.exe.manifest
 C:\Users\Daniel 2\Desktop\Diplomas\Diplomas\obj\Debug\Diplomas.application
 C:\Users\Daniel 2\Desktop\Diplomas\Diplomas\obj\Debug\Diplomas.Checador.resources
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\bin\Debug\Diplomas.exe.config
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.exe
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.pdb
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\bin\Debug\Diplomas.exe.manifest
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\bin\Debug\Diplomas.application
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\bin\Debug\Diplomas.exe
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\bin\Debug\Diplomas.pdb
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.csprojResolveAssemblyReference.cache
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.Checador.resources
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.Diplomad.resources
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.Datos.resources
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.Properties.Resources.resources
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.csproj.GenerateResource.Cache
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.exe.manifest
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.application

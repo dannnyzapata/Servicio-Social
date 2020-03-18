@@ -30,14 +30,13 @@
         {
             this.lbNombre = new System.Windows.Forms.Label();
             this.lbFolio = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.lbDel = new System.Windows.Forms.Label();
             this.lbInicio = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.lbFinal = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
+            this.lbHoras = new System.Windows.Forms.Label();
             this.lbExp = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.lbChihu = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbNombre
@@ -59,15 +58,15 @@
             this.lbFolio.TabIndex = 2;
             this.lbFolio.Text = "Folio";
             // 
-            // label1
+            // lbDel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(684, 475);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(25, 16);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "del";
+            this.lbDel.AutoSize = true;
+            this.lbDel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbDel.Location = new System.Drawing.Point(684, 475);
+            this.lbDel.Name = "lbDel";
+            this.lbDel.Size = new System.Drawing.Size(25, 16);
+            this.lbDel.TabIndex = 3;
+            this.lbDel.Text = "del";
             // 
             // lbInicio
             // 
@@ -83,7 +82,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(386, 501);
+            this.label3.Location = new System.Drawing.Point(390, 501);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 18);
             this.label3.TabIndex = 5;
@@ -99,15 +98,15 @@
             this.lbFinal.TabIndex = 6;
             this.lbFinal.Text = "28 de Octubre del 2017";
             // 
-            // label5
+            // lbHoras
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(563, 501);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(188, 18);
-            this.label5.TabIndex = 7;
-            this.label5.Text = "Con una duración de 18hrs.";
+            this.lbHoras.AutoSize = true;
+            this.lbHoras.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbHoras.Location = new System.Drawing.Point(563, 501);
+            this.lbHoras.Name = "lbHoras";
+            this.lbHoras.Size = new System.Drawing.Size(188, 18);
+            this.lbHoras.TabIndex = 7;
+            this.lbHoras.Text = "Con una duración de 18hrs.";
             // 
             // lbExp
             // 
@@ -119,43 +118,33 @@
             this.lbExp.TabIndex = 8;
             this.lbExp.Text = "28 de Octubre del 2017";
             // 
-            // label7
+            // lbChihu
             // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(467, 535);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(182, 18);
-            this.label7.TabIndex = 9;
-            this.label7.Text = ", Chihuahua, Chih., México";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(217, 560);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(549, 16);
-            this.label8.TabIndex = 10;
-            this.label8.Text = "Este documento no te avala en los servicios de interpretación en la Lengua de Señ" +
-    "as Mexicana";
+            this.lbChihu.AutoSize = true;
+            this.lbChihu.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbChihu.Location = new System.Drawing.Point(467, 535);
+            this.lbChihu.Name = "lbChihu";
+            this.lbChihu.Size = new System.Drawing.Size(182, 18);
+            this.lbChihu.TabIndex = 9;
+            this.lbChihu.Text = ", Chihuahua, Chih., México";
             // 
             // Diplomad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Diplomas.Properties.Resources.Titulo;
+            this.BackgroundImage = global::Diplomas.Properties.Resources.Nuevo_Titulo_5;
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(941, 729);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.label7);
+            this.Controls.Add(this.lbChihu);
             this.Controls.Add(this.lbExp);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.lbHoras);
             this.Controls.Add(this.lbFinal);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lbInicio);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lbDel);
             this.Controls.Add(this.lbFolio);
             this.Controls.Add(this.lbNombre);
+            this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Diplomad";
             this.Text = "Diploma";
@@ -167,13 +156,12 @@
         #endregion
         private System.Windows.Forms.Label lbFolio;
         private System.Windows.Forms.Label lbNombre;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbDel;
         private System.Windows.Forms.Label lbInicio;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label lbFinal;
-        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label lbHoras;
         private System.Windows.Forms.Label lbExp;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label lbChihu;
     }
 }

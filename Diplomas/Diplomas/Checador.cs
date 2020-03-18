@@ -50,16 +50,17 @@ namespace Diplomas
         {
             string expedir;
             string graduado;
+            string horas; 
             expedir = dtpExpedicion.Value.Day.ToString() + " de " + dtpExpedicion.Value.ToString("MMMM") + " del " + dtpExpedicion.Value.Year.ToString();
             graduado = dtpGraduar.Value.Day.ToString() + " de " + dtpGraduar.Value.ToString("MMMM") + " del " + dtpGraduar.Value.Year.ToString();
-
+            horas = spHoras.Value.ToString();
 
             foreach (var Checado in cblAlumnos.CheckedItems)
             {
                 conv = Int32.Parse(Checado.ToString());
 
                 
-                Diplomad pDiploma = new Diplomad(conv, graduado, expedir);
+                Diplomad pDiploma = new Diplomad(conv, graduado, expedir, horas);
 
             }
             this.Close();

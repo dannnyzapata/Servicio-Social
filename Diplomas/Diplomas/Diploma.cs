@@ -14,15 +14,27 @@ namespace Diplomas
     public partial class Diplomad : Form
     {
         Conexion con = new Conexion();
-        public Diplomad(int checar, string graduado, string expedido)
+          
+        public Diplomad(int checar, string graduado, string expedido, string horas)
         {
+            
 
-            InitializeComponent();                   
-            lbNombre.Text = con.LabelName(checar);                                                             
+            InitializeComponent();     
+            lbChihu.BackColor = Color.Transparent;
+            label3.BackColor = Color.Transparent;
+            lbDel.BackColor = Color.Transparent;
+            lbNombre.Text = con.LabelName(checar);
+            lbNombre.BackColor = Color.Transparent;
             lbFolio.Text = con.LabelFolio(checar);
+            lbFolio.BackColor = Color.Transparent;
             lbExp.Text = expedido;
+            lbExp.BackColor = Color.Transparent;
             lbFinal.Text = graduado;
+            lbFinal.BackColor = Color.Transparent;
             lbInicio.Text = con.ObtenerFechaInicio(checar);
+            lbInicio.BackColor = Color.Transparent;
+            lbHoras.Text = "Con una duración de " + horas + "hrs.";
+            lbHoras.BackColor = Color.Transparent;
 
 
             this.Show();

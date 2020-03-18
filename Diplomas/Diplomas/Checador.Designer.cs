@@ -39,8 +39,11 @@
             this.btCerrar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.dtpExpedicion = new System.Windows.Forms.DateTimePicker();
+            this.spHoras = new System.Windows.Forms.NumericUpDown();
+            this.label3 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.alumnosDBDataSet1)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.spHoras)).BeginInit();
             this.SuspendLayout();
             // 
             // cblAlumnos
@@ -69,7 +72,7 @@
             // 
             // btDiplomas
             // 
-            this.btDiplomas.Location = new System.Drawing.Point(209, 393);
+            this.btDiplomas.Location = new System.Drawing.Point(206, 439);
             this.btDiplomas.Name = "btDiplomas";
             this.btDiplomas.Size = new System.Drawing.Size(113, 23);
             this.btDiplomas.TabIndex = 3;
@@ -112,7 +115,7 @@
             // 
             // btCerrar
             // 
-            this.btCerrar.Location = new System.Drawing.Point(83, 393);
+            this.btCerrar.Location = new System.Drawing.Point(80, 439);
             this.btCerrar.Name = "btCerrar";
             this.btCerrar.Size = new System.Drawing.Size(113, 23);
             this.btCerrar.TabIndex = 7;
@@ -136,11 +139,44 @@
             this.dtpExpedicion.Size = new System.Drawing.Size(200, 20);
             this.dtpExpedicion.TabIndex = 8;
             // 
+            // spHoras
+            // 
+            this.spHoras.Location = new System.Drawing.Point(164, 403);
+            this.spHoras.Maximum = new decimal(new int[] {
+            40,
+            0,
+            0,
+            0});
+            this.spHoras.Minimum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.spHoras.Name = "spHoras";
+            this.spHoras.Size = new System.Drawing.Size(60, 20);
+            this.spHoras.TabIndex = 10;
+            this.spHoras.Value = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(147, 387);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(85, 13);
+            this.label3.TabIndex = 11;
+            this.label3.Text = "Horas del Curso:";
+            // 
             // Checador
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(433, 489);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.spHoras);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.dtpExpedicion);
             this.Controls.Add(this.btCerrar);
@@ -153,6 +189,7 @@
             this.Load += new System.EventHandler(this.Checador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.alumnosDBDataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.spHoras)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -171,5 +208,7 @@
         private System.Windows.Forms.Button btCerrar;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DateTimePicker dtpExpedicion;
+        private System.Windows.Forms.NumericUpDown spHoras;
+        private System.Windows.Forms.Label label3;
     }
 }
