@@ -47,6 +47,9 @@
             this.pcbFoto = new System.Windows.Forms.PictureBox();
             this.btPic = new System.Windows.Forms.Button();
             this.AbrirFile = new System.Windows.Forms.OpenFileDialog();
+            this.cbCursos = new System.Windows.Forms.ComboBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.btVerAlu = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.alumnosDBDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.registradosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).BeginInit();
@@ -68,7 +71,7 @@
             // 
             // btActualizar
             // 
-            this.btActualizar.Location = new System.Drawing.Point(92, 529);
+            this.btActualizar.Location = new System.Drawing.Point(93, 581);
             this.btActualizar.Name = "btActualizar";
             this.btActualizar.Size = new System.Drawing.Size(75, 23);
             this.btActualizar.TabIndex = 1;
@@ -114,7 +117,7 @@
             // 
             // btDiplomas
             // 
-            this.btDiplomas.Location = new System.Drawing.Point(225, 529);
+            this.btDiplomas.Location = new System.Drawing.Point(226, 581);
             this.btDiplomas.Name = "btDiplomas";
             this.btDiplomas.Size = new System.Drawing.Size(75, 23);
             this.btDiplomas.TabIndex = 7;
@@ -169,7 +172,7 @@
             // 
             // pcbFoto
             // 
-            this.pcbFoto.Location = new System.Drawing.Point(78, 278);
+            this.pcbFoto.Location = new System.Drawing.Point(79, 330);
             this.pcbFoto.Name = "pcbFoto";
             this.pcbFoto.Size = new System.Drawing.Size(233, 214);
             this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -190,11 +193,47 @@
             // 
             this.AbrirFile.FileName = "openFileDialog1";
             // 
+            // cbCursos
+            // 
+            this.cbCursos.FormattingEnabled = true;
+            this.cbCursos.Items.AddRange(new object[] {
+            "Basico",
+            "IntermedioI",
+            "IntermedioII",
+            "IntermedioIII",
+            "IntermedioIV"});
+            this.cbCursos.Location = new System.Drawing.Point(130, 285);
+            this.cbCursos.Name = "cbCursos";
+            this.cbCursos.Size = new System.Drawing.Size(121, 21);
+            this.cbCursos.TabIndex = 15;
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(66, 293);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.TabIndex = 16;
+            this.label6.Text = "Curso:";
+            // 
+            // btVerAlu
+            // 
+            this.btVerAlu.Location = new System.Drawing.Point(155, 619);
+            this.btVerAlu.Name = "btVerAlu";
+            this.btVerAlu.Size = new System.Drawing.Size(75, 23);
+            this.btVerAlu.TabIndex = 17;
+            this.btVerAlu.Text = "Ver Alumnos";
+            this.btVerAlu.UseVisualStyleBackColor = true;
+            this.btVerAlu.Click += new System.EventHandler(this.btVerAlu_Click);
+            // 
             // Datos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(399, 590);
+            this.ClientSize = new System.Drawing.Size(399, 677);
+            this.Controls.Add(this.btVerAlu);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.cbCursos);
             this.Controls.Add(this.btPic);
             this.Controls.Add(this.pcbFoto);
             this.Controls.Add(this.label5);
@@ -239,6 +278,9 @@
         private System.Windows.Forms.PictureBox pcbFoto;
         private System.Windows.Forms.Button btPic;
         private System.Windows.Forms.OpenFileDialog AbrirFile;
+        private System.Windows.Forms.ComboBox cbCursos;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Button btVerAlu;
     }
 }
 

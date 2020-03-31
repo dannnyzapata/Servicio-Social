@@ -12,42 +12,45 @@ namespace Diplomas
 {
     public partial class Datos : Form
     {
-        int i = 0;
-
+        
+        public static string SetValueParaChecador;
         Conexion con = new Conexion();
         public Datos()
         {
             InitializeComponent();
+            dtpFecha.Value = System.DateTime.Now;
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
-            this.registradosTableAdapter.Fill(this.alumnosDBDataSet.Registrados);
+            cbCursos.SelectedIndex = 0;
 
         }
 
         private void btActualizar_Click(object sender, EventArgs e)
         {
-            con.conectar();
-
-            i++;
-            con.ejecutaTransaccion("insert into Registrados values ('" +
-                txtNombre.Text + "','"
-                + txtApellido1.Text + "','"
-                + txtApellido2.Text + "','"
-                 + txtCorreo.Text + "','"
-                + dtpFecha.Value.ToString("dd/MM/yyyy") + "','" + pcbFoto.Image + "','FALSE');"
-                );
-            txtApellido1.Clear();
-            txtApellido2.Clear();
-            txtCorreo.Clear();
-            txtNombre.Clear();
-            pcbFoto.Image = null;
-            MessageBox.Show("Alumno en base de Datos");
-
-
-            con.desconectar();
+            if (txtCorreo.Text.Contains("@"))
+            {
+                con.conectar();
+                con.ejecutaTransaccion("insert into " + cbCursos.SelectedItem.ToString() + " values ('" +
+                    txtNombre.Text + "','"
+                    + txtApellido1.Text + "','"
+                    + txtApellido2.Text + "','"
+                     + txtCorreo.Text + "','"
+                    + dtpFecha.Value.ToString("dd/MM/yyyy") + "','" + pcbFoto.Image + "','FALSE');"
+                    );
+                txtApellido1.Clear();
+                txtApellido2.Clear();
+                txtCorreo.Clear();
+                txtNombre.Clear();
+                pcbFoto.Image = null;
+                MessageBox.Show("Alumno en base de Datos");
+                con.desconectar();
+            }
+            else
+            {
+                MessageBox.Show("Introdusca un correo valido por favor");
+            }
 
 
 
@@ -55,16 +58,23 @@ namespace Diplomas
 
         private void btDiplomas_Click(object sender, EventArgs e)
         {
+
             Conexion con = new Conexion();
+
+            
             int pfolio, ultimo;
             
 
-            pfolio = con.nAlumnos();
-            ultimo = con.nUltimo();
+            pfolio = con.nAlumnos(cbCursos.SelectedItem.ToString());
+            ultimo = con.nUltimo(cbCursos.SelectedItem.ToString());
           
 
             con.desconectar();
-            Checador vChecar = new Checador(pfolio, ultimo);
+
+            string check = cbCursos.SelectedItem.ToString();
+            SetValueParaChecador = check;
+
+            Checador vChecar = new Checador(pfolio, ultimo, cbCursos.SelectedItem.ToString());
    
 
         }
@@ -83,6 +93,11 @@ namespace Diplomas
             }
         }
 
+        private void btVerAlu_Click(object sender, EventArgs e)
+        {
 
+            VisorAlumnos vAlumnos = new VisorAlumnos(cbCursos.SelectedItem.ToString());
+            
+        }
     }
 }

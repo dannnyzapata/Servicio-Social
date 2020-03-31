@@ -56,3 +56,9 @@ C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\
 C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.csproj.GenerateResource.Cache
 C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.exe.manifest
 C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.application
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.IntemredioIII.resources
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.IntermedioI.resources
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.IntermedioII.resources
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.IntermedioIII.resources
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.IntermedioIV.resources
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.VisorAlumnos.resources

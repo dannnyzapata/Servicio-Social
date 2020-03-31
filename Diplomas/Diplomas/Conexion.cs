@@ -53,10 +53,10 @@ namespace Diplomas
             return bien;
         }
 
-        public int nAlumnos()
+        public int nAlumnos(string Curso)
         {
             {
-                string stmt = "SELECT TOP 1 Folio FROM Registrados";
+                string stmt = "SELECT TOP 1 Folio FROM " + Curso;
                 int count = 0;
 
                  
@@ -71,10 +71,10 @@ namespace Diplomas
             }
         }
 
-        public int nUltimo()
+        public int nUltimo(string Curso)
         {
             {
-                string stmt = "SELECT MAX(Folio) FROM Registrados";
+                string stmt = "SELECT MAX(Folio) FROM " + Curso;
                 int count = 0;
 
 
@@ -89,9 +89,10 @@ namespace Diplomas
             }
         }
 
-        public string LabelName(int i)
+
+        public string AlumnoNombre(int i, string Curso)
         {
-            string stmt = "select * FROM Registrados WHERE Folio= " + i;
+            string stmt = "select * FROM "+ Curso +" WHERE Folio= " + i;
             string count = "1";
             SqlCommand comando = new SqlCommand(stmt, conn);
             conn.Open();
@@ -103,12 +104,13 @@ namespace Diplomas
 
             conn.Close();
             return count;
-        
+
         }
 
-        public string LabelFolio(int i)
+
+        public string AlumnoFolio(int i, string Curso)
         {
-            string stmt = "select * FROM Registrados WHERE Folio= " + i;
+            string stmt = "select * FROM "+ Curso +" WHERE Folio= " + i;
             string count = "1";
             SqlCommand comando = new SqlCommand(stmt, conn);
             conn.Open();
@@ -125,9 +127,9 @@ namespace Diplomas
 
         }
 
-        public string ObtenerFechaInicio(int i)
+        public string ObtenerFechaInicio(int i, string Curso)
         {
-            string getFecha = "SELECT * FROM Registrados WHERE Folio = " + i;
+            string getFecha = "SELECT * FROM " + Curso + " WHERE Folio = " + i;
             string FechaInicio = " ";
             string resultado = " ";
             SqlCommand comando = new SqlCommand(getFecha, conn);
@@ -148,9 +150,9 @@ namespace Diplomas
 
 
 
-        public string ObtenerCorreo(int i)
+        public string ObtenerCorreo(int i, string Curso)
         {
-            string correo = "SELECT * FROM Registrados WHERE Folio = " + i;
+            string correo = "SELECT * FROM "+ Curso + " WHERE Folio = " + i;
             string enviar = " ";
             SqlCommand comando = new SqlCommand(correo, conn);
             conn.Open();
@@ -165,9 +167,42 @@ namespace Diplomas
             
         }
 
-        public string VoF(int i)
+        public string ObtenerUsuario()
         {
-            string stmt = "select * FROM Registrados WHERE Folio= " + i;
+            string correo = "SELECT Usuario FROM Correo";
+            string enviar = " ";
+            SqlCommand comando = new SqlCommand(correo, conn);
+            conn.Open();
+            SqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {
+                enviar = registro["Usuario"].ToString();
+            }
+
+            conn.Close();
+            return enviar;
+
+        }
+
+
+        public string ObtenerContraseña()
+        {
+            string correo = "SELECT Contraseña FROM Correo";
+            string enviar = " ";
+            SqlCommand comando = new SqlCommand(correo, conn);
+            conn.Open();
+            SqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {
+                enviar = registro["Contraseña"].ToString();
+            }
+
+            conn.Close();
+            return enviar;
+        }
+        public string VoF(int i,string Curso)
+        {
+            string stmt = "select * FROM " + Curso + " WHERE Folio = " + i;
             string count = " ";
             SqlCommand comando = new SqlCommand(stmt, conn);
             conn.Open();

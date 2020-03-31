@@ -56,7 +56,7 @@
             // 
             // dtpGraduar
             // 
-            this.dtpGraduar.Location = new System.Drawing.Point(97, 306);
+            this.dtpGraduar.Location = new System.Drawing.Point(100, 324);
             this.dtpGraduar.Name = "dtpGraduar";
             this.dtpGraduar.Size = new System.Drawing.Size(200, 20);
             this.dtpGraduar.TabIndex = 1;
@@ -64,7 +64,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(147, 284);
+            this.label1.Location = new System.Drawing.Point(150, 302);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 13);
             this.label1.TabIndex = 2;
@@ -72,7 +72,7 @@
             // 
             // btDiplomas
             // 
-            this.btDiplomas.Location = new System.Drawing.Point(206, 439);
+            this.btDiplomas.Location = new System.Drawing.Point(209, 457);
             this.btDiplomas.Name = "btDiplomas";
             this.btDiplomas.Size = new System.Drawing.Size(113, 23);
             this.btDiplomas.TabIndex = 3;
@@ -115,7 +115,7 @@
             // 
             // btCerrar
             // 
-            this.btCerrar.Location = new System.Drawing.Point(80, 439);
+            this.btCerrar.Location = new System.Drawing.Point(83, 457);
             this.btCerrar.Name = "btCerrar";
             this.btCerrar.Size = new System.Drawing.Size(113, 23);
             this.btCerrar.TabIndex = 7;
@@ -126,7 +126,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(147, 333);
+            this.label2.Location = new System.Drawing.Point(150, 351);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 13);
             this.label2.TabIndex = 9;
@@ -134,14 +134,14 @@
             // 
             // dtpExpedicion
             // 
-            this.dtpExpedicion.Location = new System.Drawing.Point(97, 355);
+            this.dtpExpedicion.Location = new System.Drawing.Point(100, 373);
             this.dtpExpedicion.Name = "dtpExpedicion";
             this.dtpExpedicion.Size = new System.Drawing.Size(200, 20);
             this.dtpExpedicion.TabIndex = 8;
             // 
             // spHoras
             // 
-            this.spHoras.Location = new System.Drawing.Point(164, 403);
+            this.spHoras.Location = new System.Drawing.Point(167, 421);
             this.spHoras.Maximum = new decimal(new int[] {
             40,
             0,
@@ -164,7 +164,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(147, 387);
+            this.label3.Location = new System.Drawing.Point(150, 405);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 11;
@@ -174,7 +174,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(433, 489);
+            this.ClientSize = new System.Drawing.Size(430, 522);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.spHoras);
             this.Controls.Add(this.label2);

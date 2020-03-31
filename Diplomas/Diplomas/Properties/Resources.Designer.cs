@@ -63,6 +63,46 @@ namespace Diplomas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Curso_Intermedio_1 {
+            get {
+                object obj = ResourceManager.GetObject("Curso Intermedio 1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Curso_Intermedio_2 {
+            get {
+                object obj = ResourceManager.GetObject("Curso Intermedio 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Curso_intermedio_3 {
+            get {
+                object obj = ResourceManager.GetObject("Curso intermedio 3", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cursto_Intermedio_4 {
+            get {
+                object obj = ResourceManager.GetObject("Cursto Intermedio 4", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Nuevo_Titulo {
             get {
                 object obj = ResourceManager.GetObject("Nuevo Titulo", resourceCulture);

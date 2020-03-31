@@ -11,11 +11,11 @@ using System.Drawing.Imaging;
 
 namespace Diplomas
 {
-    public partial class Diplomad : Form
+    public partial class IntermedioIII : Form
     {
         Conexion con = new Conexion();
           
-        public Diplomad(int checar, string graduado, string expedido, string horas, string Curso)
+        public IntermedioIII(int checar, string graduado, string expedido, string horas, string Curso)
         {
             
 
