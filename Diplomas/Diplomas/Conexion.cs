@@ -7,6 +7,7 @@ using System.Data.SqlClient;
 using System.Windows.Forms;
 using System.Data;
 using System.Net;
+using System.IO;
 
 namespace Diplomas
 {
@@ -217,6 +218,87 @@ namespace Diplomas
 
 
 
+        }
+
+
+        public string NombreBus(int i, string Curso)
+        {
+            string stmt = "select * FROM " + Curso + " WHERE Folio= " + i;
+            string count = " ";
+            SqlCommand comando = new SqlCommand(stmt, conn);
+            conn.Open();
+            SqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {
+                count = registro["Nombre"].ToString();
+            }
+
+            conn.Close();
+            return count;
+
+        }
+
+
+        public string Apellido1Bus(int i, string Curso)
+        {
+            string stmt = "select * FROM " + Curso + " WHERE Folio= " + i;
+            string count = " ";
+            SqlCommand comando = new SqlCommand(stmt, conn);
+            conn.Open();
+            SqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {
+                count = registro["Apellido1"].ToString();
+            }
+
+            conn.Close();
+            return count;
+
+        }
+
+
+        public string Apellido2Bus(int i, string Curso)
+        {
+            string stmt = "select * FROM " + Curso + " WHERE Folio= " + i;
+            string count = " ";
+            SqlCommand comando = new SqlCommand(stmt, conn);
+            conn.Open();
+            SqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {
+                count = registro["Apellido2"].ToString();
+            }
+
+            conn.Close();
+            return count;
+
+        }
+
+        public string Imagen(int i, string Curso)
+        {
+            string stmt = "select * FROM " + Curso + " WHERE Folio= " + i;
+            byte[] img;
+            string imagen = " ";
+            SqlCommand comando = new SqlCommand(stmt, conn);
+            conn.Open();
+            SqlDataReader registro = comando.ExecuteReader();
+            if (registro.Read())
+            {
+                img = (byte[])registro["Foto"];
+                MemoryStream ms = new MemoryStream(img);
+                StreamReader reader = new StreamReader(ms);
+                imagen = reader.ReadToEnd();
+            }
+            conn.Close();
+            return imagen;
+
+        }
+
+        public byte[] ImageToByteArray(System.Drawing.Image imagen)
+        {
+            MemoryStream ms = new MemoryStream();
+            imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+            return ms.ToArray();
         }
 
 

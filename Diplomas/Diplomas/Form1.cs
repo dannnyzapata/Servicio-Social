@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 
 namespace Diplomas
 {
@@ -29,15 +30,20 @@ namespace Diplomas
 
         private void btActualizar_Click(object sender, EventArgs e)
         {
+
             if (txtCorreo.Text.Contains("@"))
             {
+                byte[] byteArrayImagen = con.ImageToByteArray(pcbFoto.Image);
+                string Foto = BitConverter.ToString(byteArrayImagen);
+
+
                 con.conectar();
                 con.ejecutaTransaccion("insert into " + cbCursos.SelectedItem.ToString() + " values ('" +
                     txtNombre.Text + "','"
                     + txtApellido1.Text + "','"
                     + txtApellido2.Text + "','"
                      + txtCorreo.Text + "','"
-                    + dtpFecha.Value.ToString("dd/MM/yyyy") + "','" + pcbFoto.Image + "','FALSE');"
+                    + dtpFecha.Value.ToString("dd/MM/yyyy") + "', '" + Foto + "','FALSE');"
                     );
                 txtApellido1.Clear();
                 txtApellido2.Clear();

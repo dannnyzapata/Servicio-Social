@@ -44,20 +44,20 @@ namespace Diplomas
             using (Bitmap bmp = new Bitmap(this.Width, this.Height))
             {
                 this.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
-                bmp.Save(@"Diplomas/" + lbNombre.Text + ".bmp");
+                bmp.Save(@"Diplomas/IntermedioII/" + lbNombre.Text + ".bmp");
 
             }
                     
             System.Net.Mail.MailMessage mensaje = new System.Net.Mail.MailMessage();
             string correoenv = con.ObtenerCorreo(checar, Curso);
             mensaje.To.Add(correoenv);
-            mensaje.Subject = "Aquí ponemos el Subject que la instución quiera poner";
+            mensaje.Subject = "Constancia de finalización de curso";
             mensaje.SubjectEncoding = System.Text.Encoding.UTF8;
-            mensaje.Body = "Aquí ponemos lo que la institución quiera poner";
+            mensaje.Body = "A nombre del Instituto Chihuahuense de Lengua de Señas Mexicana A.C. Agradecemos su asistencia y participación en este curso, esperando que lo aprendido sea de gran provecho para su interés personal y social. <br> Anexamos su constancia. <br> Sin más, reciba un cordial saludo.<br>-----------------------------------------------<br>Este es un mensaje automatico y no se responderan mensajes que lleguen a este correo";
             mensaje.BodyEncoding = System.Text.Encoding.UTF8;
             mensaje.IsBodyHtml = true;
             mensaje.From = new System.Net.Mail.MailAddress(Usuario);//(CorreoFromAquí)
-            string ruta = @"Diplomas/" + lbNombre.Text + ".bmp";
+            string ruta = @"Diplomas/IntermedioII" + lbNombre.Text + ".bmp";
             System.Net.Mail.Attachment archivo = new System.Net.Mail.Attachment(ruta);
             mensaje.Attachments.Add(archivo);
             System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
