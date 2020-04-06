@@ -30,32 +30,39 @@ namespace Diplomas
 
         private void btActualizar_Click(object sender, EventArgs e)
         {
-
-            if (txtCorreo.Text.Contains("@"))
+            if (txtApellido1.Text.Length>0 && txtApellido2.Text.Length > 0  && txtNombre.Text.Length > 0 && txtCorreo.Text.Length >0 )
             {
-                byte[] byteArrayImagen = con.ImageToByteArray(pcbFoto.Image);
-                string Foto = BitConverter.ToString(byteArrayImagen);
+                if (txtCorreo.Text.Contains("@"))
+                {
+                    byte[] byteArrayImagen = con.ImageToByteArray(pcbFoto.Image);
+                    string Foto = BitConverter.ToString(byteArrayImagen);
 
 
-                con.conectar();
-                con.ejecutaTransaccion("insert into " + cbCursos.SelectedItem.ToString() + " values ('" +
-                    txtNombre.Text + "','"
-                    + txtApellido1.Text + "','"
-                    + txtApellido2.Text + "','"
-                     + txtCorreo.Text + "','"
-                    + dtpFecha.Value.ToString("dd/MM/yyyy") + "', '" + Foto + "','FALSE');"
-                    );
-                txtApellido1.Clear();
-                txtApellido2.Clear();
-                txtCorreo.Clear();
-                txtNombre.Clear();
-                pcbFoto.Image = null;
-                MessageBox.Show("Alumno en base de Datos");
-                con.desconectar();
+                    con.conectar();
+                    con.ejecutaTransaccion("insert into " + cbCursos.SelectedItem.ToString() + " values ('" +
+                        txtNombre.Text + "','"
+                        + txtApellido1.Text + "','"
+                        + txtApellido2.Text + "','"
+                         + txtCorreo.Text + "','"
+                        + dtpFecha.Value.ToString("dd/MM/yyyy") + "', '" + Foto + "','FALSE');"
+                        );
+                    txtApellido1.Clear();
+                    txtApellido2.Clear();
+                    txtCorreo.Clear();
+                    txtNombre.Clear();
+                    pcbFoto.Image = null;
+                    MessageBox.Show("Alumno en base de Datos");
+                    con.desconectar();
+                }
+                else
+                {
+                    MessageBox.Show("Introdusca un correo valido por favor");
+                }
+
             }
             else
             {
-                MessageBox.Show("Introdusca un correo valido por favor");
+                MessageBox.Show("Complete todos los campos por favor");
             }
 
 
