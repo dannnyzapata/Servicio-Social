@@ -17,20 +17,13 @@ namespace Diplomas
         public VisorAlumnos(string TablaVer)
         {
             InitializeComponent();
+            this.StartPosition = FormStartPosition.CenterScreen;
             this.Show();
-            Conexion con = new Conexion();
-            
+            Conexion con = new Conexion();           
             ver = TablaVer; 
-
             con.conectar();
-
-            dgvAlumnos.DataSource = con.ejecutarQuery("SELECT Folio, CONCAT(Nombre, ' ', Apellido1, ' ', Apellido2) AS Nombre FROM " + TablaVer);
-
-
-           
-            con.desconectar();
-
-           
+            dgvAlumnos.DataSource = con.ejecutarQuery("SELECT Folio, CONCAT(Nombre, ' ', Apellido1, ' ', Apellido2) AS Nombre FROM " + TablaVer);           
+            con.desconectar();          
 
         }
 

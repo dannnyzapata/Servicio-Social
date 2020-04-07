@@ -17,7 +17,7 @@ namespace Diplomas
         string Curso;
         public VerYEditar(int i, string curs)
         {
-
+            this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
             Conexion con = new Conexion();
             this.Show();
@@ -29,9 +29,7 @@ namespace Diplomas
             txtNombre.Text = con.NombreBus(i,curs);
             txtApellido1.Text = con.Apellido1Bus(i, curs);
             txtApellido2.Text = con.Apellido2Bus(i, curs);
-            byte[] byteArray = Encoding.ASCII.GetBytes(con.Imagen(i, curs));
-            MemoryStream Picture = new MemoryStream(byteArray);
-            pcbFoto.Image = Image.FromStream(Picture);
+            con.VerImagen(pcbFoto,curs,i);
 
         }
 

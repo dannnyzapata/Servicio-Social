@@ -45,6 +45,7 @@
             this.dgvAlumnos.Location = new System.Drawing.Point(21, 69);
             this.dgvAlumnos.Name = "dgvAlumnos";
             this.dgvAlumnos.ReadOnly = true;
+            this.dgvAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAlumnos.Size = new System.Drawing.Size(569, 326);
             this.dgvAlumnos.TabIndex = 0;
             // 
@@ -96,7 +97,7 @@
             this.Controls.Add(this.txtBuscar);
             this.Controls.Add(this.dgvAlumnos);
             this.Name = "VisorAlumnos";
-            this.Text = "VisorAlumnos";
+            this.Text = "Visor Alumnos";
             this.Load += new System.EventHandler(this.VisorAlumnos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAlumnos)).EndInit();
             this.ResumeLayout(false);

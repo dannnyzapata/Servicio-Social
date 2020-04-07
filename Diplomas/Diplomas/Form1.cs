@@ -20,6 +20,7 @@ namespace Diplomas
         {
             InitializeComponent();
             dtpFecha.Value = System.DateTime.Now;
+            this.StartPosition = FormStartPosition.CenterScreen;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -33,26 +34,14 @@ namespace Diplomas
             if (txtApellido1.Text.Length>0 && txtApellido2.Text.Length > 0  && txtNombre.Text.Length > 0 && txtCorreo.Text.Length >0 )
             {
                 if (txtCorreo.Text.Contains("@"))
-                {
-                    byte[] byteArrayImagen = con.ImageToByteArray(pcbFoto.Image);
-                    string Foto = BitConverter.ToString(byteArrayImagen);
-
-
-                    con.conectar();
-                    con.ejecutaTransaccion("insert into " + cbCursos.SelectedItem.ToString() + " values ('" +
-                        txtNombre.Text + "','"
-                        + txtApellido1.Text + "','"
-                        + txtApellido2.Text + "','"
-                         + txtCorreo.Text + "','"
-                        + dtpFecha.Value.ToString("dd/MM/yyyy") + "', '" + Foto + "','FALSE');"
-                        );
+                {                            
+                    con.InsertarDatos(cbCursos.SelectedItem.ToString(),pcbFoto, txtCorreo.Text, txtNombre.Text, txtApellido1.Text, txtApellido2.Text, dtpFecha.Value.ToString("dd/MM/yyyy"));            
                     txtApellido1.Clear();
                     txtApellido2.Clear();
                     txtCorreo.Clear();
                     txtNombre.Clear();
                     pcbFoto.Image = null;
-                    MessageBox.Show("Alumno en base de Datos");
-                    con.desconectar();
+                    MessageBox.Show("Alumno en base de Datos");                                
                 }
                 else
                 {
@@ -72,22 +61,12 @@ namespace Diplomas
         private void btDiplomas_Click(object sender, EventArgs e)
         {
 
-            Conexion con = new Conexion();
-
-            
-            int pfolio, ultimo;
-            
-
-            pfolio = con.nAlumnos(cbCursos.SelectedItem.ToString());
-            ultimo = con.nUltimo(cbCursos.SelectedItem.ToString());
-          
-
+            Conexion con = new Conexion();                     
             con.desconectar();
-
             string check = cbCursos.SelectedItem.ToString();
             SetValueParaChecador = check;
 
-            Checador vChecar = new Checador(pfolio, ultimo, cbCursos.SelectedItem.ToString());
+            Checador vChecar = new Checador(cbCursos.SelectedItem.ToString());
    
 
         }

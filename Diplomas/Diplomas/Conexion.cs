@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Data.Sql;
 using System.Windows.Forms;
 using System.Data;
 using System.Net;
@@ -54,41 +55,7 @@ namespace Diplomas
             return bien;
         }
 
-        public int nAlumnos(string Curso)
-        {
-            {
-                string stmt = "SELECT TOP 1 Folio FROM " + Curso;
-                int count = 0;
 
-                 
-                    using (SqlCommand cmdCount = new SqlCommand(stmt, conn))
-                    {
-                        conn.Open();
-                        count = (int)cmdCount.ExecuteScalar();
-                        conn.Close();
-                    }
-                
-                return count;
-            }
-        }
-
-        public int nUltimo(string Curso)
-        {
-            {
-                string stmt = "SELECT MAX(Folio) FROM " + Curso;
-                int count = 0;
-
-
-                using (SqlCommand cmdCount = new SqlCommand(stmt, conn))
-                {
-                    conn.Open();
-                    count = (int)cmdCount.ExecuteScalar();
-                    conn.Close();
-                }
-
-                return count;
-            }
-        }
 
 
         public string AlumnoNombre(int i, string Curso)
@@ -201,26 +168,6 @@ namespace Diplomas
             conn.Close();
             return enviar;
         }
-        public string VoF(int i,string Curso)
-        {
-            string stmt = "select * FROM " + Curso + " WHERE Folio = " + i;
-            string count = " ";
-            SqlCommand comando = new SqlCommand(stmt, conn);
-            conn.Open();
-            SqlDataReader registro = comando.ExecuteReader();
-            if (registro.Read())
-            {
-                count = registro["Graduado"].ToString();
-            }
-
-            conn.Close();
-            return count;
-
-
-
-        }
-
-
         public string NombreBus(int i, string Curso)
         {
             string stmt = "select * FROM " + Curso + " WHERE Folio= " + i;
@@ -294,13 +241,64 @@ namespace Diplomas
 
         }
 
-        public byte[] ImageToByteArray(System.Drawing.Image imagen)
+     
+
+        public string InsertarDatos(string curso, PictureBox Foto, string correo, string nombre, string apellido1, string apellido2, string fecha)
         {
-            MemoryStream ms = new MemoryStream();
-            imagen.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
-            return ms.ToArray();
+            
+            string mensaje = "Todo bien";
+            try
+            {
+                           
+                SqlCommand comando = new SqlCommand("insert into " + curso + "(Nombre, Apellido1, Apellido2, Correo, Fecha, Graduado, Foto) values ('" +
+                        nombre + "','"
+                        + apellido1 + "','"
+                        + apellido2 + "','"
+                         + correo + "','"
+                        + fecha + "', 'FALSE', @Imagen);", conn);
+                
+                conn.Open();
+                comando.Parameters.Add("@Imagen", SqlDbType.Image);
+                System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                Foto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                comando.Parameters["@Imagen"].Value = ms.GetBuffer();
+                comando.ExecuteNonQuery();
+                conn.Close();              
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("No se insero la imagen: " + ex.ToString());
+            }
+            
+            return mensaje;
+
         }
 
+        public void VerImagen(PictureBox Foto, string curso, int i)
+        {
+           
+            try
+            {
+                DataRow dr;
+                string request = "SELECT Foto FROM " + curso + " WHERE Folio = " + i;
+                SqlDataAdapter ver = new SqlDataAdapter(request, conn);
+                DataSet ds = new DataSet();
+                ver.Fill(ds, curso);
+                byte[] datos = new byte[0];
+                dr = ds.Tables[curso].Rows[0];
+                datos = (byte[])dr["Foto"];
+                System.IO.MemoryStream ms = new System.IO.MemoryStream(datos);
+                Foto.Image = System.Drawing.Bitmap.FromStream(ms);
+
+            }
+            catch 
+            {
+                MessageBox.Show("No se pudo cargar la imagen del alumno");
+                Foto.Image = null;
+            }
+
+
+        }
 
     }
 }

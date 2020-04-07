@@ -75,7 +75,7 @@ namespace Diplomas
            {
                 MessageBox.Show("Error al enviar correo");
            }
-                    
+                  
            con.conectar();
            con.ejecutaTransaccion("UPDATE " + Curso + " SET Graduado = 'TRUE' WHERE Folio= " + checar);
            con.desconectar();
