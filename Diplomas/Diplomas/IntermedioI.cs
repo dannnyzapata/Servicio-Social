@@ -37,14 +37,14 @@ namespace Diplomas
             lbHoras.BackColor = Color.Transparent;
             string Usuario = con.ObtenerUsuario();
             string Contraseña = con.ObtenerContraseña();
-
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
             this.Show();
             this.Hide();
             using (Bitmap bmp = new Bitmap(this.Width, this.Height))
             {
                 this.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
-                bmp.Save(@"Diplomas/IntermedioI/" + lbNombre.Text + ".bmp");
+                bmp.Save(path + "/Diplomas/IntermedioI/" + lbNombre.Text + ".bmp");
 
             }
                     
@@ -56,8 +56,8 @@ namespace Diplomas
             mensaje.Body = "A nombre del Instituto Chihuahuense de Lengua de Señas Mexicana A.C. Agradecemos su asistencia y participación en este curso, esperando que lo aprendido sea de gran provecho para su interés personal y social. <br> Anexamos su constancia. <br> Sin más, reciba un cordial saludo.<br>-----------------------------------------------<br>Este es un mensaje automatico y no se responderan mensajes que lleguen a este correo";
             mensaje.BodyEncoding = System.Text.Encoding.UTF8;
             mensaje.IsBodyHtml = true;
-            mensaje.From = new System.Net.Mail.MailAddress(Usuario);//(CorreoFromAquí)
-            string ruta = @"Diplomas/IntermedioI/" + lbNombre.Text + ".bmp";
+            mensaje.From = new System.Net.Mail.MailAddress(Usuario);//(CorreoFromAquí)          
+            string ruta = path + "/Diplomas/IntermedioI/" + lbNombre.Text + ".bmp";
             System.Net.Mail.Attachment archivo = new System.Net.Mail.Attachment(ruta);
             mensaje.Attachments.Add(archivo);
             System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
@@ -71,9 +71,9 @@ namespace Diplomas
                 cliente.Send(mensaje);
 
            }
-           catch (Exception)
+           catch (Exception ex )
            {
-                MessageBox.Show("Error al enviar correo a " + lbNombre.Text);
+                MessageBox.Show("Error al enviar correo a " + lbNombre.Text + " Por error : " + ex);
             }
                     
            con.conectar();

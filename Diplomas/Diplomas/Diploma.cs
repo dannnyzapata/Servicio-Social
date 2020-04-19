@@ -37,14 +37,14 @@ namespace Diplomas
             lbHoras.BackColor = Color.Transparent;
             string Usuario = con.ObtenerUsuario();
             string Contraseña = con.ObtenerContraseña();
-
+            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
 
             this.Show();
             this.Hide();
             using (Bitmap bmp = new Bitmap(this.Width, this.Height))
             {
                 this.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
-                bmp.Save(@"Diplomas/Basico/" + lbNombre.Text + ".bmp");
+                bmp.Save(path + "/Diplomas/Basico/" + lbNombre.Text + ".bmp");
 
             }
                     
@@ -57,7 +57,7 @@ namespace Diplomas
             mensaje.BodyEncoding = System.Text.Encoding.UTF8;
             mensaje.IsBodyHtml = true;
             mensaje.From = new System.Net.Mail.MailAddress(Usuario);//(CorreoFromAquí)
-            string ruta = @"Diplomas/Basico/" + lbNombre.Text + ".bmp";
+            string ruta = path + "/Diplomas/Basico/" + lbNombre.Text + ".bmp";
             System.Net.Mail.Attachment archivo = new System.Net.Mail.Attachment(ruta);
             mensaje.Attachments.Add(archivo);
             System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
