@@ -73,7 +73,7 @@ namespace Diplomas
            }
            catch (Exception)
            {
-                MessageBox.Show("Error al enviar correo");
+                MessageBox.Show("Error al enviar correo a " + lbNombre.Text);
            }
                   
            con.conectar();

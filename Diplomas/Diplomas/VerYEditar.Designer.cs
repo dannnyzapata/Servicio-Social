@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VerYEditar));
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -49,72 +50,87 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(36, 203);
+            this.label5.BackColor = System.Drawing.Color.Linen;
+            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label5.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label5.Location = new System.Drawing.Point(14, 196);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(93, 13);
+            this.label5.Size = new System.Drawing.Size(95, 15);
             this.label5.TabIndex = 26;
             this.label5.Text = "Fecha de Ingreso:";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 166);
+            this.label4.BackColor = System.Drawing.Color.Linen;
+            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label4.Location = new System.Drawing.Point(66, 159);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
+            this.label4.Size = new System.Drawing.Size(43, 15);
             this.label4.TabIndex = 25;
-            this.label4.Text = "Correo";
+            this.label4.Text = "Correo:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(36, 125);
+            this.label3.BackColor = System.Drawing.Color.Linen;
+            this.label3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label3.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label3.Location = new System.Drawing.Point(11, 118);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(96, 13);
+            this.label3.Size = new System.Drawing.Size(98, 15);
             this.label3.TabIndex = 24;
             this.label3.Text = "Segundo Apellido: ";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(36, 88);
+            this.label2.BackColor = System.Drawing.Color.Linen;
+            this.label2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label2.Location = new System.Drawing.Point(25, 81);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(82, 13);
+            this.label2.Size = new System.Drawing.Size(84, 15);
             this.label2.TabIndex = 23;
             this.label2.Text = "Primer Apellido: ";
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(36, 51);
+            this.label1.BackColor = System.Drawing.Color.Linen;
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label1.Location = new System.Drawing.Point(60, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(47, 13);
+            this.label1.Size = new System.Drawing.Size(49, 15);
             this.label1.TabIndex = 22;
             this.label1.Text = "Nombre:";
             // 
             // txtCorreo
             // 
-            this.txtCorreo.Location = new System.Drawing.Point(145, 159);
+            this.txtCorreo.Location = new System.Drawing.Point(120, 152);
             this.txtCorreo.Name = "txtCorreo";
             this.txtCorreo.Size = new System.Drawing.Size(196, 20);
             this.txtCorreo.TabIndex = 20;
             // 
             // txtApellido2
             // 
-            this.txtApellido2.Location = new System.Drawing.Point(145, 122);
+            this.txtApellido2.Location = new System.Drawing.Point(120, 115);
             this.txtApellido2.Name = "txtApellido2";
             this.txtApellido2.Size = new System.Drawing.Size(196, 20);
             this.txtApellido2.TabIndex = 19;
             // 
             // txtApellido1
             // 
-            this.txtApellido1.Location = new System.Drawing.Point(145, 81);
+            this.txtApellido1.Location = new System.Drawing.Point(120, 74);
             this.txtApellido1.Name = "txtApellido1";
             this.txtApellido1.Size = new System.Drawing.Size(196, 20);
             this.txtApellido1.TabIndex = 18;
             // 
             // txtNombre
             // 
-            this.txtNombre.Location = new System.Drawing.Point(145, 40);
+            this.txtNombre.Location = new System.Drawing.Point(120, 33);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.Size = new System.Drawing.Size(196, 20);
             this.txtNombre.TabIndex = 17;
@@ -122,15 +138,17 @@
             // lbFecha
             // 
             this.lbFecha.AutoSize = true;
-            this.lbFecha.Location = new System.Drawing.Point(142, 203);
+            this.lbFecha.BackColor = System.Drawing.Color.Bisque;
+            this.lbFecha.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbFecha.Location = new System.Drawing.Point(117, 196);
             this.lbFecha.Name = "lbFecha";
-            this.lbFecha.Size = new System.Drawing.Size(40, 13);
+            this.lbFecha.Size = new System.Drawing.Size(42, 15);
             this.lbFecha.TabIndex = 33;
             this.lbFecha.Text = "prueba";
             // 
             // btCambiar
             // 
-            this.btCambiar.Location = new System.Drawing.Point(208, 553);
+            this.btCambiar.Location = new System.Drawing.Point(137, 506);
             this.btCambiar.Name = "btCambiar";
             this.btCambiar.Size = new System.Drawing.Size(75, 23);
             this.btCambiar.TabIndex = 32;
@@ -140,7 +158,7 @@
             // 
             // pcbFoto
             // 
-            this.pcbFoto.Location = new System.Drawing.Point(84, 287);
+            this.pcbFoto.Location = new System.Drawing.Point(67, 270);
             this.pcbFoto.Name = "pcbFoto";
             this.pcbFoto.Size = new System.Drawing.Size(233, 214);
             this.pcbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -150,15 +168,18 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(92, 247);
+            this.label6.BackColor = System.Drawing.Color.Linen;
+            this.label6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.label6.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.label6.Location = new System.Drawing.Point(67, 240);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(37, 13);
+            this.label6.Size = new System.Drawing.Size(39, 15);
             this.label6.TabIndex = 30;
             this.label6.Text = "Curso:";
             // 
             // btCerrar
             // 
-            this.btCerrar.Location = new System.Drawing.Point(84, 553);
+            this.btCerrar.Location = new System.Drawing.Point(137, 535);
             this.btCerrar.Name = "btCerrar";
             this.btCerrar.Size = new System.Drawing.Size(75, 23);
             this.btCerrar.TabIndex = 31;
@@ -169,9 +190,11 @@
             // lbCurso
             // 
             this.lbCurso.AutoSize = true;
-            this.lbCurso.Location = new System.Drawing.Point(142, 247);
+            this.lbCurso.BackColor = System.Drawing.Color.Bisque;
+            this.lbCurso.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lbCurso.Location = new System.Drawing.Point(117, 240);
             this.lbCurso.Name = "lbCurso";
-            this.lbCurso.Size = new System.Drawing.Size(40, 13);
+            this.lbCurso.Size = new System.Drawing.Size(42, 15);
             this.lbCurso.TabIndex = 34;
             this.lbCurso.Text = "prueba";
             // 
@@ -179,7 +202,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(369, 681);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(369, 598);
             this.Controls.Add(this.lbCurso);
             this.Controls.Add(this.lbFecha);
             this.Controls.Add(this.btCambiar);
@@ -195,6 +219,7 @@
             this.Controls.Add(this.txtApellido2);
             this.Controls.Add(this.txtApellido1);
             this.Controls.Add(this.txtNombre);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "VerYEditar";
             this.Text = "Ver y Editar Alumno";
             ((System.ComponentModel.ISupportInitialize)(this.pcbFoto)).EndInit();

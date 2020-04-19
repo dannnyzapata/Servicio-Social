@@ -250,12 +250,12 @@ namespace Diplomas
             try
             {
                            
-                SqlCommand comando = new SqlCommand("insert into " + curso + "(Nombre, Apellido1, Apellido2, Correo, Fecha, Graduado, Foto) values ('" +
+                SqlCommand comando = new SqlCommand("insert into " + curso + "(Nombre, Apellido1, Apellido2, Correo, Fecha, Graduado, Upgrade, Foto) values ('" +
                         nombre + "','"
                         + apellido1 + "','"
                         + apellido2 + "','"
                          + correo + "','"
-                        + fecha + "', 'FALSE', @Imagen);", conn);
+                        + fecha + "', 'FALSE','FALSE', @Imagen);", conn);
                 
                 conn.Open();
                 comando.Parameters.Add("@Imagen", SqlDbType.Image);
@@ -265,11 +265,42 @@ namespace Diplomas
                 comando.ExecuteNonQuery();
                 conn.Close();              
             }
-            catch (Exception ex)
+            catch 
             {
-                MessageBox.Show("No se insero la imagen: " + ex.ToString());
+                MessageBox.Show("No se guardo la imagen");
             }
             
+            return mensaje;
+
+        }
+
+        public string SubirCurso(string curso, PictureBox Foto, string folio, string correo, string nombre, string apellido1, string apellido2, string fecha)
+        {
+
+            string mensaje = "Todo bien";
+            try
+            {
+
+                SqlCommand comando = new SqlCommand("insert into " + curso + "(Folio,Nombre, Apellido1, Apellido2, Correo, Fecha, Graduado, Upgrade, Foto) values ('" + folio + "','" +
+                        nombre + "','"
+                        + apellido1 + "','"
+                        + apellido2 + "','"
+                         + correo + "','"
+                        + fecha + "', 'FALSE', 'FALSE', @Imagen);", conn);
+
+                conn.Open();
+                comando.Parameters.Add("@Imagen", SqlDbType.Image);
+                System.IO.MemoryStream ms = new System.IO.MemoryStream();
+                Foto.Image.Save(ms, System.Drawing.Imaging.ImageFormat.Jpeg);
+                comando.Parameters["@Imagen"].Value = ms.GetBuffer();
+                comando.ExecuteNonQuery();
+                conn.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+
             return mensaje;
 
         }

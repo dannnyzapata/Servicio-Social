@@ -14,18 +14,21 @@ namespace Diplomas
     public partial class Datos : Form
     {
         
-        public static string SetValueParaChecador;
+        
         Conexion con = new Conexion();
-        public Datos()
+        string cursos;
+        public Datos(string curso)
         {
+            cursos = curso; 
             InitializeComponent();
             dtpFecha.Value = System.DateTime.Now;
             this.StartPosition = FormStartPosition.CenterScreen;
+            this.Show();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            cbCursos.SelectedIndex = 0;
+            lbcurso.Text = cursos;
 
         }
 
@@ -34,15 +37,20 @@ namespace Diplomas
             if (txtApellido1.Text.Length>0 && txtApellido2.Text.Length > 0  && txtNombre.Text.Length > 0 && txtCorreo.Text.Length >0 )
             {
                 if (txtCorreo.Text.Contains("@"))
-                {                            
-                    con.InsertarDatos(cbCursos.SelectedItem.ToString(),pcbFoto, txtCorreo.Text, txtNombre.Text, txtApellido1.Text, txtApellido2.Text, dtpFecha.Value.ToString("dd/MM/yyyy"));            
-                    txtApellido1.Clear();
-                    txtApellido2.Clear();
-                    txtCorreo.Clear();
-                    txtNombre.Clear();
-                    pcbFoto.Image = null;
-                    MessageBox.Show("Alumno en base de Datos");                                
-                }
+                {     
+                    if (pcbFoto.Image != null)
+                    {                        
+                            con.InsertarDatos(lbcurso.Text, pcbFoto, txtCorreo.Text, txtNombre.Text, txtApellido1.Text, txtApellido2.Text, dtpFecha.Value.ToString("dd/MM/yyyy"));
+                            txtApellido1.Clear();
+                            txtApellido2.Clear();
+                            txtCorreo.Clear();
+                            txtNombre.Clear();
+                            pcbFoto.Image = null;
+                            MessageBox.Show("Alumno en base de Datos");
+                            
+                        }                     
+                    }                                                                                       
+                
                 else
                 {
                     MessageBox.Show("Introdusca un correo valido por favor");
@@ -53,23 +61,11 @@ namespace Diplomas
             {
                 MessageBox.Show("Complete todos los campos por favor");
             }
-
+            
 
 
         }
 
-        private void btDiplomas_Click(object sender, EventArgs e)
-        {
-
-            Conexion con = new Conexion();                     
-            con.desconectar();
-            string check = cbCursos.SelectedItem.ToString();
-            SetValueParaChecador = check;
-
-            Checador vChecar = new Checador(cbCursos.SelectedItem.ToString());
-   
-
-        }
 
         private void btPic_Click(object sender, EventArgs e)
         {
@@ -85,11 +81,16 @@ namespace Diplomas
             }
         }
 
-        private void btVerAlu_Click(object sender, EventArgs e)
-        {
 
-            VisorAlumnos vAlumnos = new VisorAlumnos(cbCursos.SelectedItem.ToString());
-            
+
+        private void btCancelar_Click(object sender, EventArgs e)
+        {
+            txtApellido1.Clear();
+            txtApellido2.Clear();
+            txtCorreo.Clear();
+            txtNombre.Clear();
+            pcbFoto.Image = null;
+            this.Close();
         }
     }
 }

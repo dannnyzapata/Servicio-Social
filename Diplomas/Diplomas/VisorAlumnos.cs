@@ -20,9 +20,10 @@ namespace Diplomas
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Show();
             Conexion con = new Conexion();           
-            ver = TablaVer; 
+            ver = TablaVer;
+            lbCurso.Text = ver; 
             con.conectar();
-            dgvAlumnos.DataSource = con.ejecutarQuery("SELECT Folio, CONCAT(Nombre, ' ', Apellido1, ' ', Apellido2) AS Nombre FROM " + TablaVer);           
+            dgvAlumnos.DataSource = con.ejecutarQuery("SELECT Folio, CONCAT(Nombre, ' ', Apellido1, ' ', Apellido2) AS Nombre, Graduado FROM " + TablaVer);           
             con.desconectar();          
 
         }

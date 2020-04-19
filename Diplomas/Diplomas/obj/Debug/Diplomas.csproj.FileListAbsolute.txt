@@ -63,3 +63,6 @@ C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\
 C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.IntermedioIV.resources
 C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.VisorAlumnos.resources
 C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.VerYEditar.resources
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.Menus.resources
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.Pasar.resources
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Debug\Diplomas.Subir.resources

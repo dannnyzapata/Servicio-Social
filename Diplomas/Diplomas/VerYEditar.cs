@@ -43,19 +43,26 @@ namespace Diplomas
         {
             Conexion con = new Conexion();
             con.conectar();
-            if (txtCorreo.Text.Contains("@"))
+            if (txtApellido1.Text.Length > 0 && txtApellido2.Text.Length > 0 && txtNombre.Text.Length > 0 && txtCorreo.Text.Length > 0)
             {
-                con.ejecutaTransaccion("UPDATE " + Curso +
-                                       " SET Nombre = '" + txtNombre.Text +
-                                       "', Apellido1 = '" + txtApellido1.Text +
-                                       "', Apellido2 = '" + txtApellido2.Text +
-                                       "', Correo = '" + txtCorreo.Text +
-                                       "' WHERE Folio = " + Folio);
-                MessageBox.Show("Alumno actualizado");
+                if (txtCorreo.Text.Contains("@"))
+                {
+                    con.ejecutaTransaccion("UPDATE " + Curso +
+                                           " SET Nombre = '" + txtNombre.Text +
+                                           "', Apellido1 = '" + txtApellido1.Text +
+                                           "', Apellido2 = '" + txtApellido2.Text +
+                                           "', Correo = '" + txtCorreo.Text +
+                                           "' WHERE Folio = " + Folio);
+                    MessageBox.Show("Alumno actualizado");
+                }
+                else
+                {
+                    MessageBox.Show("Por favor introdusca un correo valido");
+                }
             }
             else
             {
-                MessageBox.Show("Por favor introdusca un correo valido");
+                MessageBox.Show("Por favor no deje datos en blanco");
             }
             con.desconectar();
 

@@ -24,7 +24,7 @@ namespace Diplomas
         
         public Checador(string curso)
         {
-            this.StartPosition = FormStartPosition.CenterScreen;
+            this.StartPosition = FormStartPosition.CenterParent;
             this.Show();
             InitializeComponent();
             dtpExpedicion.Value = System.DateTime.Now;
@@ -47,7 +47,7 @@ namespace Diplomas
             string expedir;
             string graduado;
             string horas;
-            string cursos = Datos.SetValueParaChecador;
+            string cursos = Menus.SetValueParaChecado;
             expedir = dtpExpedicion.Value.Day.ToString() + " de " + dtpExpedicion.Value.ToString("MMMM") + " del " + dtpExpedicion.Value.Year.ToString();
             graduado = dtpGraduar.Value.Day.ToString() + " de " + dtpGraduar.Value.ToString("MMMM") + " del " + dtpGraduar.Value.Year.ToString();
             horas = spHoras.Value.ToString();

@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Checador));
             this.dtpGraduar = new System.Windows.Forms.DateTimePicker();
             this.btDiplomas = new System.Windows.Forms.Button();
             this.alumnosDBDataSet1 = new Diplomas.AlumnosDBDataSet();
@@ -46,6 +47,7 @@
             // dtpGraduar
             // 
             this.dtpGraduar.Location = new System.Drawing.Point(169, 350);
+            this.dtpGraduar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtpGraduar.Name = "dtpGraduar";
             this.dtpGraduar.Size = new System.Drawing.Size(200, 20);
             this.dtpGraduar.TabIndex = 1;
@@ -53,6 +55,7 @@
             // btDiplomas
             // 
             this.btDiplomas.Location = new System.Drawing.Point(284, 483);
+            this.btDiplomas.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btDiplomas.Name = "btDiplomas";
             this.btDiplomas.Size = new System.Drawing.Size(113, 23);
             this.btDiplomas.TabIndex = 3;
@@ -68,6 +71,7 @@
             // btCerrar
             // 
             this.btCerrar.Location = new System.Drawing.Point(152, 483);
+            this.btCerrar.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.btCerrar.Name = "btCerrar";
             this.btCerrar.Size = new System.Drawing.Size(113, 23);
             this.btCerrar.TabIndex = 7;
@@ -78,7 +82,8 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(213, 377);
+            this.label2.Location = new System.Drawing.Point(212, 377);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 13);
             this.label2.TabIndex = 9;
@@ -87,6 +92,7 @@
             // dtpExpedicion
             // 
             this.dtpExpedicion.Location = new System.Drawing.Point(169, 399);
+            this.dtpExpedicion.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dtpExpedicion.Name = "dtpExpedicion";
             this.dtpExpedicion.Size = new System.Drawing.Size(200, 20);
             this.dtpExpedicion.TabIndex = 8;
@@ -94,6 +100,7 @@
             // spHoras
             // 
             this.spHoras.Location = new System.Drawing.Point(239, 447);
+            this.spHoras.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.spHoras.Maximum = new decimal(new int[] {
             40,
             0,
@@ -117,6 +124,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(227, 431);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(85, 13);
             this.label3.TabIndex = 11;
@@ -127,8 +135,10 @@
             this.dgvAlumnos.AllowUserToAddRows = false;
             this.dgvAlumnos.AllowUserToDeleteRows = false;
             this.dgvAlumnos.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvAlumnos.BackgroundColor = System.Drawing.Color.LightGray;
             this.dgvAlumnos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvAlumnos.Location = new System.Drawing.Point(12, 12);
+            this.dgvAlumnos.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.dgvAlumnos.Name = "dgvAlumnos";
             this.dgvAlumnos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvAlumnos.Size = new System.Drawing.Size(514, 300);
@@ -138,6 +148,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(211, 328);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(116, 13);
             this.label1.TabIndex = 2;
@@ -147,6 +158,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(538, 522);
             this.Controls.Add(this.dgvAlumnos);
             this.Controls.Add(this.label3);
@@ -157,8 +169,11 @@
             this.Controls.Add(this.btDiplomas);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dtpGraduar);
+            this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Name = "Checador";
-            this.Text = "Checador";
+            this.Text = "Generar Diplomas";
             this.Load += new System.EventHandler(this.Checador_Load);
             ((System.ComponentModel.ISupportInitialize)(this.alumnosDBDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.spHoras)).EndInit();
