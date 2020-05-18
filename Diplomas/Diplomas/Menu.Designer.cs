@@ -37,13 +37,14 @@
             this.btSubir = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.btDatosSuperior = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btVerAlu
             // 
             this.btVerAlu.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.btVerAlu.ForeColor = System.Drawing.Color.Snow;
-            this.btVerAlu.Location = new System.Drawing.Point(296, 195);
+            this.btVerAlu.Location = new System.Drawing.Point(212, 336);
             this.btVerAlu.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btVerAlu.Name = "btVerAlu";
             this.btVerAlu.Size = new System.Drawing.Size(87, 105);
@@ -56,7 +57,7 @@
             // 
             this.btDiplomas.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.btDiplomas.ForeColor = System.Drawing.Color.Snow;
-            this.btDiplomas.Location = new System.Drawing.Point(125, 349);
+            this.btDiplomas.Location = new System.Drawing.Point(125, 462);
             this.btDiplomas.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btDiplomas.Name = "btDiplomas";
             this.btDiplomas.Size = new System.Drawing.Size(87, 105);
@@ -74,7 +75,7 @@
             this.btIngresar.Name = "btIngresar";
             this.btIngresar.Size = new System.Drawing.Size(87, 105);
             this.btIngresar.TabIndex = 20;
-            this.btIngresar.Text = "Ingresar Datos";
+            this.btIngresar.Text = "Ingresar Datos en Curso Basico";
             this.btIngresar.UseVisualStyleBackColor = false;
             this.btIngresar.Click += new System.EventHandler(this.btIngresar_Click);
             // 
@@ -107,7 +108,7 @@
             // 
             this.btSubir.BackColor = System.Drawing.SystemColors.WindowFrame;
             this.btSubir.ForeColor = System.Drawing.Color.Snow;
-            this.btSubir.Location = new System.Drawing.Point(296, 349);
+            this.btSubir.Location = new System.Drawing.Point(296, 462);
             this.btSubir.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btSubir.Name = "btSubir";
             this.btSubir.Size = new System.Drawing.Size(87, 105);
@@ -142,12 +143,26 @@
             this.label2.TabIndex = 25;
             this.label2.Text = "Para el Instituo Chihuahuense de Lenguaje de Señas";
             // 
+            // btDatosSuperior
+            // 
+            this.btDatosSuperior.BackColor = System.Drawing.SystemColors.WindowFrame;
+            this.btDatosSuperior.ForeColor = System.Drawing.Color.Snow;
+            this.btDatosSuperior.Location = new System.Drawing.Point(296, 195);
+            this.btDatosSuperior.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.btDatosSuperior.Name = "btDatosSuperior";
+            this.btDatosSuperior.Size = new System.Drawing.Size(87, 105);
+            this.btDatosSuperior.TabIndex = 26;
+            this.btDatosSuperior.Text = "Ingresar Datos en Otros Cursos";
+            this.btDatosSuperior.UseVisualStyleBackColor = false;
+            this.btDatosSuperior.Click += new System.EventHandler(this.btDatosSuperior_Click);
+            // 
             // Menus
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 17F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(521, 533);
+            this.ClientSize = new System.Drawing.Size(530, 649);
+            this.Controls.Add(this.btDatosSuperior);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btSubir);
@@ -177,5 +192,6 @@
         private System.Windows.Forms.Button btSubir;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Button btDatosSuperior;
     }
 }

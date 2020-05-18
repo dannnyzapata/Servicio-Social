@@ -23,3 +23,7 @@ C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\
 C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Release\Diplomas.Menus.resources
 C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Release\Diplomas.Pasar.resources
 C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Release\Diplomas.Subir.resources
+C:\Users\Daniel 2\Desktop\Servicio\Version de 19 de Abril 2020\Servicio-Social\Diplomas\Diplomas\bin\Release\Diplomas.exe.config
+C:\Users\Daniel 2\Desktop\Servicio\Version de 19 de Abril 2020\Servicio-Social\Diplomas\Diplomas\obj\Release\Diplomas.exe
+C:\Users\Daniel 2\Desktop\Servicio\Version de 19 de Abril 2020\Servicio-Social\Diplomas\Diplomas\obj\Release\Diplomas.pdb
+C:\Users\Daniel 2\Desktop\Servicio Social\Servicio-Social\Diplomas\Diplomas\obj\Release\Diplomas.Cursos_Nuevos.resources

@@ -16,7 +16,7 @@ namespace Diplomas
         int Folio;
         string Curso;
         string upgrade = "lol";
-        public Pasar(int i, string curs, string upar)
+        public Pasar(int i, string curs, string upar, string Cursos)
         {
             this.StartPosition = FormStartPosition.CenterScreen;
             InitializeComponent();
@@ -26,14 +26,14 @@ namespace Diplomas
 
             Curso = curs;
             
-            lbCorreo.Text = con.ObtenerCorreo(i,"Basico");             
+            lbCorreo.Text = con.ObtenerCorreo(i, Cursos);             
             dtNuevoCurso.Value = System.DateTime.Now;
             lbCurso.Text = curs;
             lbFolio.Text = i.ToString();
-            lbNombre.Text = con.NombreBus(i, "Basico");
-            lbApellido1.Text = con.Apellido1Bus(i, "Basico");
-            lbApellido2.Text = con.Apellido2Bus(i, "Basico");
-            con.VerImagen(pcbFoto, "Basico", i);
+            lbNombre.Text = con.NombreBus(i, Cursos);
+            lbApellido1.Text = con.Apellido1Bus(i, Cursos);
+            lbApellido2.Text = con.Apellido2Bus(i, Cursos);
+            con.VerImagen(pcbFoto, Cursos, i);
 
             upgrade = upar;
 

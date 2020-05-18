@@ -15,7 +15,7 @@ namespace Diplomas
     {
         Conexion con = new Conexion();
           
-        public IntermedioIV(int checar, string graduado, string expedido, string horas, string Curso)
+        public IntermedioIV(int checar, string graduado, string expedido, string horas, string Curso, string Tipo)
         {
             
 
@@ -23,6 +23,9 @@ namespace Diplomas
             lbChihu.BackColor = Color.Transparent;
             label3.BackColor = Color.Transparent;
             lbDel.BackColor = Color.Transparent;
+            lbCurso.BackColor = Color.Transparent;
+            lbMexicana.BackColor = Color.Transparent;
+            lbParticipar.BackColor = Color.Transparent;
             lbNombre.Text = con.AlumnoNombre(checar,Curso);
             lbNombre.BackColor = Color.Transparent;
             lbFolio.Text = con.AlumnoFolio(checar, Curso);
@@ -36,15 +39,16 @@ namespace Diplomas
             lbHoras.Text = "Con una duración de " + horas + "hrs.";
             lbHoras.BackColor = Color.Transparent;
             string Usuario = con.ObtenerUsuario();
+            lbCurso.Text = Tipo;
             string Contraseña = con.ObtenerContraseña();
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
 
             this.Show();
             this.Hide();
             using (Bitmap bmp = new Bitmap(this.Width, this.Height))
             {
                 this.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
-                bmp.Save(path + "/Diplomas/IntermedioIV/" + lbNombre.Text + ".bmp");
+                bmp.Save(@"Diplomas/IntermedioIV/" + lbNombre.Text + ".bmp");
 
             }
                     
@@ -57,7 +61,7 @@ namespace Diplomas
             mensaje.BodyEncoding = System.Text.Encoding.UTF8;
             mensaje.IsBodyHtml = true;
             mensaje.From = new System.Net.Mail.MailAddress(Usuario);//(CorreoFromAquí)
-            string ruta = path + "/Diplomas/IntermedioIV/" + lbNombre.Text + ".bmp";
+            string ruta = @"Diplomas/IntermedioIV/" + lbNombre.Text + ".bmp";
             System.Net.Mail.Attachment archivo = new System.Net.Mail.Attachment(ruta);
             mensaje.Attachments.Add(archivo);
             System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();

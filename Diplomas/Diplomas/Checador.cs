@@ -48,6 +48,7 @@ namespace Diplomas
             string graduado;
             string horas;
             string cursos = Menus.SetValueParaChecado;
+            string tipo = textBox1.Text;
             expedir = dtpExpedicion.Value.Day.ToString() + " de " + dtpExpedicion.Value.ToString("MMMM") + " del " + dtpExpedicion.Value.Year.ToString();
             graduado = dtpGraduar.Value.Day.ToString() + " de " + dtpGraduar.Value.ToString("MMMM") + " del " + dtpGraduar.Value.Year.ToString();
             horas = spHoras.Value.ToString();
@@ -60,19 +61,19 @@ namespace Diplomas
                     switch (cursos)
                     {
                         case "Basico":
-                            Diplomad pDiploma = new Diplomad(conv, graduado, expedir, horas, cursos);
+                            Diplomad pDiploma = new Diplomad(conv, graduado, expedir, horas, cursos, tipo);
                             break;
                         case "IntermedioI":
-                            IntermedioI pIntermedioI = new IntermedioI(conv, graduado, expedir, horas, cursos);
+                            IntermedioI pIntermedioI = new IntermedioI(conv, graduado, expedir, horas, cursos, tipo);
                             break;
                         case "IntermedioII":
-                            IntermedioII pIntermedioII = new IntermedioII(conv, graduado, expedir, horas, cursos);
+                            IntermedioII pIntermedioII = new IntermedioII(conv, graduado, expedir, horas, cursos, tipo);
                             break;
                         case "IntermedioIII":
-                            IntermedioIII pIntermedioIII = new IntermedioIII(conv, graduado, expedir, horas, cursos);
+                            IntermedioIII pIntermedioIII = new IntermedioIII(conv, graduado, expedir, horas, cursos, tipo);
                             break;
                         case "IntermedioIV":
-                            IntermedioIV pIntermedioIV = new IntermedioIV(conv, graduado, expedir, horas, cursos);
+                            IntermedioIV pIntermedioIV = new IntermedioIV(conv, graduado, expedir, horas, cursos, tipo);
                             break;
                     }
 

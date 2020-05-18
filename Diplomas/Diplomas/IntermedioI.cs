@@ -15,7 +15,7 @@ namespace Diplomas
     {
         Conexion con = new Conexion();
           
-        public IntermedioI(int checar, string graduado, string expedido, string horas, string Curso)
+        public IntermedioI(int checar, string graduado, string expedido, string horas, string Curso, string Tipo)
         {
             
 
@@ -35,16 +35,20 @@ namespace Diplomas
             lbInicio.BackColor = Color.Transparent;
             lbHoras.Text = "Con una duración de " + horas + "hrs.";
             lbHoras.BackColor = Color.Transparent;
+            lbCurso.Text = Tipo;
+            lbCurso.BackColor = Color.Transparent;
+            lbMexicana.BackColor = Color.Transparent;
+            lbParticipar.BackColor = Color.Transparent;
             string Usuario = con.ObtenerUsuario();
             string Contraseña = con.ObtenerContraseña();
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
 
             this.Show();
             this.Hide();
             using (Bitmap bmp = new Bitmap(this.Width, this.Height))
             {
                 this.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
-                bmp.Save(path + "/Diplomas/IntermedioI/" + lbNombre.Text + ".bmp");
+                bmp.Save(@"Diplomas/IntermedioI/" + lbNombre.Text + ".bmp");
 
             }
                     
@@ -56,8 +60,8 @@ namespace Diplomas
             mensaje.Body = "A nombre del Instituto Chihuahuense de Lengua de Señas Mexicana A.C. Agradecemos su asistencia y participación en este curso, esperando que lo aprendido sea de gran provecho para su interés personal y social. <br> Anexamos su constancia. <br> Sin más, reciba un cordial saludo.<br>-----------------------------------------------<br>Este es un mensaje automatico y no se responderan mensajes que lleguen a este correo";
             mensaje.BodyEncoding = System.Text.Encoding.UTF8;
             mensaje.IsBodyHtml = true;
-            mensaje.From = new System.Net.Mail.MailAddress(Usuario);//(CorreoFromAquí)          
-            string ruta = path + "/Diplomas/IntermedioI/" + lbNombre.Text + ".bmp";
+            mensaje.From = new System.Net.Mail.MailAddress(Usuario);//(CorreoFromAquí)
+            string ruta = @"Diplomas/IntermedioI/" + lbNombre.Text + ".bmp";
             System.Net.Mail.Attachment archivo = new System.Net.Mail.Attachment(ruta);
             mensaje.Attachments.Add(archivo);
             System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();
@@ -71,9 +75,9 @@ namespace Diplomas
                 cliente.Send(mensaje);
 
            }
-           catch (Exception ex )
+           catch (Exception)
            {
-                MessageBox.Show("Error al enviar correo a " + lbNombre.Text + " Por error : " + ex);
+                MessageBox.Show("Error al enviar correo a " + lbNombre.Text);
             }
                     
            con.conectar();

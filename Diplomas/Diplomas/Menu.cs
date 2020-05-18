@@ -39,24 +39,29 @@ namespace Diplomas
                 case 0:
                     btIngresar.Enabled = true;
                     btSubir.Enabled = false;
+                    btDatosSuperior.Enabled = false;
                     break;
 
                 case 1:
                     btIngresar.Enabled = false;
                     btSubir.Enabled = true;
+                    btDatosSuperior.Enabled = true;
                     break;
 
                 case 2:
                     btIngresar.Enabled = false;
                     btSubir.Enabled = true;
+                    btDatosSuperior.Enabled = true;
                     break;
                 case 3:
                     btIngresar.Enabled = false;
                     btSubir.Enabled = true;
+                    btDatosSuperior.Enabled = true;
                     break;
                 case 4:
                     btIngresar.Enabled = false;
                     btSubir.Enabled = true;
+                    btDatosSuperior.Enabled = true;
                     break;
             }            
         }
@@ -95,6 +100,11 @@ namespace Diplomas
             }
             Subir Up = new Subir(cbCursos.SelectedItem.ToString(), upgrade);
             
+        }
+
+        private void btDatosSuperior_Click(object sender, EventArgs e)
+        {
+            Cursos_Nuevos Cursar = new Cursos_Nuevos(cbCursos.SelectedItem.ToString());
         }
     }
 }

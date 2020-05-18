@@ -37,22 +37,25 @@
             this.lbHoras = new System.Windows.Forms.Label();
             this.lbExp = new System.Windows.Forms.Label();
             this.lbChihu = new System.Windows.Forms.Label();
+            this.lbMexicana = new System.Windows.Forms.Label();
+            this.lbCurso = new System.Windows.Forms.Label();
+            this.lbParticipar = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lbNombre
             // 
-            this.lbNombre.AutoSize = true;
-            this.lbNombre.Font = new System.Drawing.Font("Tahoma", 36F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbNombre.Location = new System.Drawing.Point(230, 337);
+            this.lbNombre.Font = new System.Drawing.Font("Tahoma", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbNombre.Location = new System.Drawing.Point(0, 309);
             this.lbNombre.Name = "lbNombre";
-            this.lbNombre.Size = new System.Drawing.Size(172, 58);
+            this.lbNombre.Size = new System.Drawing.Size(941, 86);
             this.lbNombre.TabIndex = 1;
             this.lbNombre.Text = "Prueba";
+            this.lbNombre.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lbFolio
             // 
             this.lbFolio.AutoSize = true;
-            this.lbFolio.Location = new System.Drawing.Point(162, 73);
+            this.lbFolio.Location = new System.Drawing.Point(151, 73);
             this.lbFolio.Name = "lbFolio";
             this.lbFolio.Size = new System.Drawing.Size(29, 13);
             this.lbFolio.TabIndex = 2;
@@ -62,7 +65,7 @@
             // 
             this.lbDel.AutoSize = true;
             this.lbDel.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbDel.Location = new System.Drawing.Point(748, 454);
+            this.lbDel.Location = new System.Drawing.Point(748, 419);
             this.lbDel.Name = "lbDel";
             this.lbDel.Size = new System.Drawing.Size(25, 16);
             this.lbDel.TabIndex = 3;
@@ -72,7 +75,7 @@
             // 
             this.lbInicio.AutoSize = true;
             this.lbInicio.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbInicio.Location = new System.Drawing.Point(240, 476);
+            this.lbInicio.Location = new System.Drawing.Point(240, 441);
             this.lbInicio.Name = "lbInicio";
             this.lbInicio.Size = new System.Drawing.Size(162, 18);
             this.lbInicio.TabIndex = 4;
@@ -82,7 +85,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(393, 476);
+            this.label3.Location = new System.Drawing.Point(393, 441);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(18, 18);
             this.label3.TabIndex = 5;
@@ -92,7 +95,7 @@
             // 
             this.lbFinal.AutoSize = true;
             this.lbFinal.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbFinal.Location = new System.Drawing.Point(409, 476);
+            this.lbFinal.Location = new System.Drawing.Point(409, 441);
             this.lbFinal.Name = "lbFinal";
             this.lbFinal.Size = new System.Drawing.Size(162, 18);
             this.lbFinal.TabIndex = 6;
@@ -102,7 +105,7 @@
             // 
             this.lbHoras.AutoSize = true;
             this.lbHoras.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbHoras.Location = new System.Drawing.Point(566, 476);
+            this.lbHoras.Location = new System.Drawing.Point(566, 441);
             this.lbHoras.Name = "lbHoras";
             this.lbHoras.Size = new System.Drawing.Size(188, 18);
             this.lbHoras.TabIndex = 7;
@@ -112,7 +115,7 @@
             // 
             this.lbExp.AutoSize = true;
             this.lbExp.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbExp.Location = new System.Drawing.Point(320, 510);
+            this.lbExp.Location = new System.Drawing.Point(320, 475);
             this.lbExp.Name = "lbExp";
             this.lbExp.Size = new System.Drawing.Size(162, 18);
             this.lbExp.TabIndex = 8;
@@ -122,19 +125,55 @@
             // 
             this.lbChihu.AutoSize = true;
             this.lbChihu.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbChihu.Location = new System.Drawing.Point(470, 510);
+            this.lbChihu.Location = new System.Drawing.Point(470, 475);
             this.lbChihu.Name = "lbChihu";
             this.lbChihu.Size = new System.Drawing.Size(182, 18);
             this.lbChihu.TabIndex = 9;
             this.lbChihu.Text = ", Chihuahua, Chih., México";
             // 
+            // lbMexicana
+            // 
+            this.lbMexicana.AutoSize = true;
+            this.lbMexicana.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbMexicana.ForeColor = System.Drawing.Color.Black;
+            this.lbMexicana.Location = new System.Drawing.Point(530, 417);
+            this.lbMexicana.Name = "lbMexicana";
+            this.lbMexicana.Size = new System.Drawing.Size(207, 18);
+            this.lbMexicana.TabIndex = 21;
+            this.lbMexicana.Text = "de Lengua de Señas Mexicana";
+            // 
+            // lbCurso
+            // 
+            this.lbCurso.AutoSize = true;
+            this.lbCurso.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbCurso.ForeColor = System.Drawing.Color.Black;
+            this.lbCurso.Location = new System.Drawing.Point(382, 417);
+            this.lbCurso.Name = "lbCurso";
+            this.lbCurso.Size = new System.Drawing.Size(144, 18);
+            this.lbCurso.TabIndex = 20;
+            this.lbCurso.Text = "Curso Intermedio III";
+            // 
+            // lbParticipar
+            // 
+            this.lbParticipar.AutoSize = true;
+            this.lbParticipar.Font = new System.Drawing.Font("Tahoma", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbParticipar.ForeColor = System.Drawing.Color.Black;
+            this.lbParticipar.Location = new System.Drawing.Point(208, 417);
+            this.lbParticipar.Name = "lbParticipar";
+            this.lbParticipar.Size = new System.Drawing.Size(168, 18);
+            this.lbParticipar.TabIndex = 19;
+            this.lbParticipar.Text = "Por su participacion en el";
+            // 
             // IntermedioIII
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackgroundImage = global::Diplomas.Properties.Resources.Curso_intermedio_3;
+            this.BackgroundImage = global::Diplomas.Properties.Resources.Cursos_4_Bien_2;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(941, 729);
+            this.Controls.Add(this.lbMexicana);
+            this.Controls.Add(this.lbCurso);
+            this.Controls.Add(this.lbParticipar);
             this.Controls.Add(this.lbChihu);
             this.Controls.Add(this.lbExp);
             this.Controls.Add(this.lbHoras);
@@ -163,5 +202,8 @@
         private System.Windows.Forms.Label lbHoras;
         private System.Windows.Forms.Label lbExp;
         private System.Windows.Forms.Label lbChihu;
+        private System.Windows.Forms.Label lbMexicana;
+        private System.Windows.Forms.Label lbCurso;
+        private System.Windows.Forms.Label lbParticipar;
     }
 }

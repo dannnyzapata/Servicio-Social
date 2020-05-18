@@ -15,7 +15,7 @@ namespace Diplomas
     {
         Conexion con = new Conexion();
           
-        public IntermedioIII(int checar, string graduado, string expedido, string horas, string Curso)
+        public IntermedioIII(int checar, string graduado, string expedido, string horas, string Curso, string Tipo)
         {
             
 
@@ -35,16 +35,20 @@ namespace Diplomas
             lbInicio.BackColor = Color.Transparent;
             lbHoras.Text = "Con una duración de " + horas + "hrs.";
             lbHoras.BackColor = Color.Transparent;
+            lbCurso.Text = Tipo;
+            lbCurso.BackColor = Color.Transparent;
+            lbMexicana.BackColor = Color.Transparent;
+            lbParticipar.BackColor = Color.Transparent;
             string Usuario = con.ObtenerUsuario();
             string Contraseña = con.ObtenerContraseña();
-            string path = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+
 
             this.Show();
             this.Hide();
             using (Bitmap bmp = new Bitmap(this.Width, this.Height))
             {
                 this.DrawToBitmap(bmp, new Rectangle(0, 0, bmp.Width, bmp.Height));
-                bmp.Save(path + "/Diplomas/IntermedioIII/" + lbNombre.Text + ".bmp");
+                bmp.Save(@"Diplomas/IntermedioIII/" + lbNombre.Text + ".bmp");
 
             }
                     
@@ -57,7 +61,7 @@ namespace Diplomas
             mensaje.BodyEncoding = System.Text.Encoding.UTF8;
             mensaje.IsBodyHtml = true;
             mensaje.From = new System.Net.Mail.MailAddress(Usuario);//(CorreoFromAquí)
-            string ruta = path + "/Diplomas/IntermedioIII/" + lbNombre.Text + ".bmp";
+            string ruta = @"Diplomas/IntermedioIII/" + lbNombre.Text + ".bmp";
             System.Net.Mail.Attachment archivo = new System.Net.Mail.Attachment(ruta);
             mensaje.Attachments.Add(archivo);
             System.Net.Mail.SmtpClient cliente = new System.Net.Mail.SmtpClient();

@@ -93,6 +93,116 @@ namespace Diplomas.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Cursos_1_Bien {
+            get {
+                object obj = ResourceManager.GetObject("Cursos 1 Bien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cursos_1_Bien_2 {
+            get {
+                object obj = ResourceManager.GetObject("Cursos 1 Bien 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cursos_1_Bien_21 {
+            get {
+                object obj = ResourceManager.GetObject("Cursos 1 Bien 21", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cursos_2_Bien {
+            get {
+                object obj = ResourceManager.GetObject("Cursos 2 Bien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cursos_2_Bien_2 {
+            get {
+                object obj = ResourceManager.GetObject("Cursos 2 Bien 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cursos_3_Bien {
+            get {
+                object obj = ResourceManager.GetObject("Cursos 3 Bien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cursos_3_Bien_2 {
+            get {
+                object obj = ResourceManager.GetObject("Cursos 3 Bien 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cursos_4_Bien {
+            get {
+                object obj = ResourceManager.GetObject("Cursos 4 Bien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cursos_4_Bien_2 {
+            get {
+                object obj = ResourceManager.GetObject("Cursos 4 Bien 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cursos_5_Bien {
+            get {
+                object obj = ResourceManager.GetObject("Cursos 5 Bien", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap Cursos_5_Bien_2 {
+            get {
+                object obj = ResourceManager.GetObject("Cursos 5 Bien 2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Cursto_Intermedio_4 {
             get {
                 object obj = ResourceManager.GetObject("Cursto Intermedio 4", resourceCulture);

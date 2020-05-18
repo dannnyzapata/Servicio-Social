@@ -14,19 +14,21 @@ namespace Diplomas
     {
         string ver;
         string upar;
+        Conexion con = new Conexion();
 
         public Subir(string TablaVer, string SubirDe)
         {
             InitializeComponent();
             this.StartPosition = FormStartPosition.CenterScreen;
             this.Show();
-            Conexion con = new Conexion();           
+                
             ver = TablaVer;
             lbCurso.Text = TablaVer;
             upar = SubirDe;           
             con.conectar();
             dgvAlumnos.DataSource = con.ejecutarQuery("SELECT Folio, CONCAT(Nombre, ' ', Apellido1, ' ', Apellido2) AS Nombre FROM " + SubirDe + " WHERE Upgrade = 'False'");           
-            con.desconectar();          
+            con.desconectar();    
+                  
 
         }
 
@@ -49,8 +51,25 @@ namespace Diplomas
         private void btMostrar_Click(object sender, EventArgs e)
         {                       
             int Folio;
+            string CursoChess = "lol";
+            switch (lbCurso.Text)
+            {
+                
+                case "IntermedioI":
+                    CursoChess = "Basico";
+                    break;
+                case "IntermedioII":
+                    CursoChess = "IntermedioI";
+                    break;
+                case "IntermedioIII":
+                    CursoChess = "IntermedioII";
+                    break;
+                case "IntermedioIV":
+                    CursoChess = "IntermedioIII";
+                    break;
+            }
             Folio = Int32.Parse(dgvAlumnos.CurrentRow.Cells[0].Value.ToString());
-            Pasar Editar = new Pasar(Folio, ver, upar);           
+            Pasar Editar = new Pasar(Folio, ver, upar, CursoChess);           
         }
     }
 }
